@@ -59,7 +59,7 @@ if [ -n "$NEWEST_JAR" ]; then
   SERVER=${NEWEST_JAR/.jar/}
 fi
 
-MODE=""
+MODE="single"
 INVITE_CODE=""
 SECURE_KEY=""
 while getopts ":m:s:i:k:" opt
