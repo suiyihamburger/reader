@@ -93,7 +93,7 @@ elif [[ "${MODE}" == "single" ]]; then
     JAVA_OPT="${JAVA_OPT} -Dreader.app.secure=false"
     echo "Reader 将以单用户模式运行。注意，当前内存限制为256m"
 else
-    JAVA_OPT="${JAVA_OPT} -server -Xms1g -Xmx1g -Xmn512m -XX:MetaspaceSize=64m -XX:MaxMetaspaceSize=160m"
+    JAVA_OPT="${JAVA_OPT} -server -Xms256m -Xmx256m -Xmn128m -XX:MetaspaceSize=64m -XX:MaxMetaspaceSize=160m"
     JAVA_OPT="${JAVA_OPT} -XX:-OmitStackTraceInFastThrow -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${BASE_DIR}/logs/java_heapdump.hprof"
     JAVA_OPT="${JAVA_OPT} -XX:-UseLargePages"
     JAVA_OPT="${JAVA_OPT} -Dreader.app.secure=true"
